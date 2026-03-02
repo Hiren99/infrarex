@@ -14,3 +14,6 @@ AOS.init({
     // once: true
 });
 /* ----- # AOS ----- */
+
+/* ==== fully year show */
+var date = new Date().getFullYear();document.getElementById("year").innerHTML = date;

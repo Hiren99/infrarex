@@ -115,7 +115,15 @@
     --dark: #000;
     --text: #1f2937;
 }
-
+* {outline: none;}
+::-webkit-scrollbar {
+    width: 8px !important;
+}
+::-webkit-scrollbar-thumb {
+    background: #85d3ff;
+    border-radius: 2px;
+    height: 50px;
+}
 html {
   scroll-behavior: smooth;
 }
@@ -133,7 +141,7 @@ p {letter-spacing: 0.1px;font-size: 1em;}
 ul {list-style: none;padding-left: 0;margin-bottom: 0;}
 a, a:hover {text-decoration: none;transition: all 0.3s ease;display: inline-block;}
 button {outline: none;transition: all 0.3s ease;border: 0;}
-.section {width: 100%;overflow: hidden;}
+.section, footer {width: 100%;overflow: hidden;}
 
 .container {max-width: 1340px;}
 
@@ -157,6 +165,7 @@ button {outline: none;transition: all 0.3s ease;border: 0;}
     z-index: 2;
     transition: all 0.4s ease;
     display: inline-block;
+    white-space: pre;
 }
 .btn-split::before,
 .btn-split::after,
@@ -292,9 +301,9 @@ button {outline: none;transition: all 0.3s ease;border: 0;}
 
 /* ==== project ==== */
 .cd-projects {background-color: #e7f6ff;padding: 4rem 0;}
-.cd-projects .cd-listofProjects {display: grid;grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));gap: 20px;margin-top: 1rem;}
+.cd-projects .cd-listofProjects {display: grid;grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));gap: 10px;margin-top: 1rem;}
 /* Card Container */
-.cd-projects .solar-card {/*width: 350px;*/overflow: hidden;cursor: pointer;margin: 1rem 0;}
+.cd-projects .solar-card {/*width: 350px;*/overflow: hidden;cursor: pointer;}
 .cd-projects .card-image {position: relative;overflow: hidden;}
 .cd-projects .card-image img {width: 100%;display: block;transition: transform 0.5s ease;}
 .cd-projects .overlay {position: absolute;inset: 0;background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0.1));transition: background 0.4s ease;}
@@ -315,7 +324,7 @@ button {outline: none;transition: all 0.3s ease;border: 0;}
 .cd-ctasection .cd-calltext .cd-custcall {color: var(--white);font-size: clamp(2rem, 3vw, 3.75rem);font-family: 'rubik_l';}
 
 /* --- footer --- */
-.cd-footer {background-color: var(--white);padding: 4rem 0 0;color: var(--primary);}
+.cd-footer {background-color: var(--white);padding: 4rem 0 0;color: var(--primary);text-wrap: balance;}
 .cd-footer .cd-footerinfo {display: flex;align-items: start;gap: 1rem;justify-content: space-between;border-bottom: 1px solid var(--primary);padding-bottom: 3rem;}
 .cd-footer .cd-footerinfo .cd-footicon {flex: 0 0 auto;}
 .cd-footer .cd-footerinfo .cd-footlist {display: flex;align-items: start;gap: 1.5rem;}
@@ -403,44 +412,54 @@ button {outline: none;transition: all 0.3s ease;border: 0;}
 @media (min-width: 992px) {
     .mobile-sticky-footer {display: none;}
     
+    
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
-    
+    .navbar-expand-lg .navbar-nav {flex: 0 0 auto;}
+    .cd-navheader .nav-link {padding: 5px !important;}
+    .cd-about .cd-clogo::after {min-height: 155px;}
+    .cd-footer .cd-footerinfo .cd-footlist {flex: 0 0 33.33%;}
 }
 @media (max-width: 991px) {
     .cd-topbar {display: none;}
     #return-to-top {bottom: 50px;}
-    .cd-navheader button.navbar-toggler {border: 0;padding: 0;}
+    nav.cd-navheader .navbar-collapse {margin-top: 8px;border-top: 1px solid var(--second);}
+    .cd-navheader button.navbar-toggler {border: 0;background-color: var(--second);}
     .cd-footer {margin-bottom: 45px;}
     .cd-footer .cd-footerinfo {flex-wrap: wrap;}
+    .cd-projects .cd-listofProjects {gap: 10px;}
+    .cd-projects .solar-card {margin: 0;}
+    .slider-container .cd-innerbox .cd-textbox {top: 5rem;padding-inline: 1rem;}
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-    
+    .cd-solustion .cd-smallbox {margin-top: -45px;padding-top: 45px;z-index: -1;position: relative;}
+    .cd-about .cd-clogo::after {min-height: 142px;}
+    .cd-service .cd-serviceIcon {grid-template-columns: repeat(auto-fit, minmax(155px, 1fr));}
 }
 @media (max-width: 767px) {    
-    .cd-copyright {flex-wrap: wrap;}
-    .slider-container .cd-innerbox .cd-textbox {top: 5rem;padding-inline: 1rem;}
+    .cd-copyright {flex-wrap: wrap;}    
     .slide-box img {width: auto;}
     .cd-about, .cd-solustion, .cd-service, .cd-projects {padding: 2rem 0;}
     .cd-footer {padding-top: 2rem;}
     .cd-solustion .cd-innerbox {padding: 2rem 1.5rem;}
-}
-@media only screen and (min-width: 640px) and (max-width: 767px) {
-    
-}
-@media (max-width: 639px) {
-    .cd-about .cd-clogo::after {min-height: 60px;}
     .cd-about .cd-clogo {margin-bottom: 2rem;}
     .cd-solustion .cd-smallbox { margin-top: -45px;padding-top: 4rem;z-index: -1;position: relative;}
     .cd-solustion .cd-smallbox img {display: none;}
     .cd-solustion .cd-smallbox .cd-innerinfo {justify-content: center;}
     .cd-service .cd-serviceIcon {gap: 0;}
     .cd-service .cd-round {margin: 0;}
+    .cd-ctasection .cd-msgbtn, .cd-ctasection .cd-calltext {text-align: center;}
+    .cd-ctasection .cd-calltext .cd-custcall {margin-top: 1rem;}
+    
+}
+@media only screen and (min-width: 640px) and (max-width: 767px) {
+    .cd-about .cd-clogo::after {min-height: 105px;}
+}
+@media (max-width: 639px) {
+    .cd-about .cd-clogo::after {min-height: 60px;}     
     .cd-whyChoose .cd-rightside {margin-top: 2rem;}
-    .cd-cta {flex-wrap: wrap;text-align: center;padding-block:2rem}
-    .cd-projects .cd-listofProjects {gap: 0;}
+    .cd-cta {flex-wrap: wrap;text-align: center;padding-block:2rem}    
     .cd-projects .cd-btnbox {margin-top: 2rem;}
     .cd-ctasection {padding: 1.5rem;}
-    .cd-ctasection .cd-calltext {text-align: center;}
-    .cd-ctasection .cd-calltext .cd-custcall {margin-top: 1rem;}
+    
 }
