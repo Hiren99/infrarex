@@ -7,3 +7,10 @@
         }
     });
     $('#return-to-top').click(function () { $('body,html').animate({ scrollTop: 0 }, 500); });
+
+/* ----- AOS ----- */
+AOS.init({
+    // duration: 1000,
+    // once: true
+});
+/* ----- # AOS ----- */
