@@ -415,6 +415,55 @@ button {outline: none;transition: all 0.3s ease;border: 0;}
 .cd-testimonial .team-card {min-height: 186px;display: flex;flex-direction: column;justify-content: space-between;}
 .cd-testimonial .team-card h4 {font-family: 'rubik_m';font-size: clamp(1.2rem, 3vw, 1.125rem);}
 
+/* ---- portfolio ---- */
+.cd-portfolio {padding: 4rem 0;}
+.cd-portfolio .card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 1rem 0;
+}
+
+.cd-portfolio .card img {
+    width: 100%;
+    min-height: 300px;
+    object-fit: cover;
+    transition: 0.4s;
+}
+
+.cd-portfolio .card:hover img {
+    transform: scale(1.1);
+}
+
+.cd-portfolio .card-content {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 20px 1rem;
+    color: var(--white);
+    background: linear-gradient(#00000000, rgb(0 0 0 / 78%));
+}
+.cd-portfolio .card-content h3 {font-size: clamp(1.2rem, 3vw, 1.5rem);color: var(--white);margin-bottom: 0;}
+.cd-portfolio .play-btn {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: var(--second);
+    border: none;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cd-portfolio .play-btn .cd-openytub .fi {color: var(--white);line-height: normal;display: flex;}
+/* modal */
+
+
+
 /* --- footer --- */
 .cd-footer {background-color: var(--white);padding: 4rem 0 0;color: var(--primary);text-wrap: balance;}
 .cd-footer .cd-footerinfo {display: flex;align-items: start;gap: 1rem;justify-content: space-between;border-bottom: 1px solid var(--primary);padding-bottom: 3rem;}
@@ -534,7 +583,7 @@ button {outline: none;transition: all 0.3s ease;border: 0;}
 @media (max-width: 767px) {    
     .cd-copyright {flex-wrap: wrap;}    
     .slide-box img {width: auto;}
-    .cd-about, .cd-solustion, .cd-service, .cd-projects, .about-section, .team-section, .counter-section, .section-wrap, .cd-solarRoof, .cd-compnay, .cd-feature, .cd-welcome {padding: 2rem 0;}
+    .cd-about, .cd-solustion, .cd-service, .cd-projects, .about-section, .team-section, .counter-section, .section-wrap, .cd-solarRoof, .cd-compnay, .cd-feature, .cd-welcome, .cd-portfolio {padding: 2rem 0;}
     .cd-footer {padding-top: 2rem;}
     .cd-solustion .cd-innerbox {padding: 2rem 1.5rem;}
     .cd-about .cd-clogo {margin-bottom: 2rem;}
