@@ -207,7 +207,7 @@ button {outline: none;transition: all 0.3s ease;border: 0;}
 .cd-list li::before {position: absolute;content: '\f00c';font-family: "Font Awesome 6 Pro";color: #66a900;left: 0;font-weight: 800;}
 
 /* font size */
-.cd-sectiontitle .titleh2 { color: var(--primary);font-size: clamp(1.8rem, 2vw, 2.5em);font-family: 'rubik_sb';}
+.cd-sectiontitle .titleh2 { color: var(--primary);font-size: clamp(1.5rem, 2vw, 2.5em);font-family: 'rubik_sb';}
 .cd-sectiontitle .title36 {font-size: 2.75em;font-weight: 600;margin-bottom: 8px;color: var(--dark);}
 .cd-sectiontitle .cd-subtitle {font-size: 1.25em;font-family: 'rubik_m';color: var(--primary);}
 .cd-sectiontitle .cd-subtitle18 {font-size: 18px;font-weight: bold;color: var(--btn-bg);}
@@ -439,26 +439,13 @@ button {outline: none;transition: all 0.3s ease;border: 0;}
 .cd-contact .form-control, .cd-contact .form-select {border-radius: 5px;padding: 12px;border: 1px solid #dee2e6;}
 .cd-contact .form-control:focus, .cd-contact .form-select:focus {border-color: var(--second);box-shadow: 0 0 0 0.2rem rgba(124, 179, 66, 0.25);}
 /* FAQ Section */
-.faq-section {
-    background-color: var(--light-bg);
-    padding: 4rem 0;
-}
-.accordion-button:not(.collapsed) {
-    color: var(--primary);
-    background-color: rgba(124, 179, 66, 0.1);
-    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.125);
-}
-.accordion-button:focus {
-    box-shadow: 0 0 0 0.25rem rgba(124, 179, 66, 0.25);
-    border-color: rgba(124, 179, 66, 0.5);
-}
-.accordion-item {
-    border: none;
-    margin-bottom: 10px;
-    border-radius: 5px !important;
-    overflow: hidden;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-}
+.faq-section {padding: 4rem 0;}
+.faq-section .accordion-button:not(.collapsed) {color: var(--primary);background-color: rgba(124, 179, 66, 0.1);box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.125);}
+.faq-section .accordion-button:focus {box-shadow: 0 0 0 0.25rem rgba(124, 179, 66, 0.25);border-color: rgba(124, 179, 66, 0.5);}
+.faq-section .accordion-item {border: none;margin: 1rem 0;border-radius: 5px !important;overflow: hidden;box-shadow: 0 0 8px 3px rgb(0 0 0 / 8%);padding: 6px;}
+.faq-section .accordion-item .accordion-button {font-size: 18px;font-family: 'rubik_m';box-shadow: none;}
+.accordion-button:focus {box-shadow: none;}
+
 
 /* --- footer --- */
 .cd-footer {background-color: var(--white);padding: 4rem 0 0;color: var(--primary);text-wrap: balance;}
@@ -551,6 +538,9 @@ button {outline: none;transition: all 0.3s ease;border: 0;}
     
     
 }
+@media only screen and (min-width: 1200px) and (max-width: 1320px) {
+    .cd-footer .cd-footerinfo .cd-footlist {flex: 0 0 33.33%;}
+}
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
     .navbar-expand-lg .navbar-nav {flex: 0 0 auto;}
     .cd-navheader .nav-link {padding: 5px !important;}
@@ -576,10 +566,13 @@ button {outline: none;transition: all 0.3s ease;border: 0;}
     .cd-service .cd-serviceIcon {grid-template-columns: repeat(auto-fit, minmax(155px, 1fr));}
     .counter-section .counter-item {min-width: 220px;}
 }
+@media (min-width: 768px) {
+    .faq-section .accordion-item .cd-twocol {column-count: 2;}
+}
 @media (max-width: 767px) {    
     .cd-copyright {flex-wrap: wrap;}    
     .slide-box img {width: auto;}
-    .cd-about, .cd-solustion, .cd-service, .cd-projects, .about-section, .team-section, .counter-section, .section-wrap, .cd-solarRoof, .cd-compnay, .cd-feature, .cd-welcome, .cd-portfolio {padding: 2rem 0;}
+    .cd-about, .cd-solustion, .cd-service, .cd-projects, .about-section, .team-section, .counter-section, .section-wrap, .cd-solarRoof, .cd-compnay, .cd-feature, .cd-welcome, .cd-portfolio, .cd-contact, .faq-section {padding: 2rem 0;}
     .cd-footer {padding-top: 2rem;}
     .cd-solustion .cd-innerbox {padding: 2rem 1.5rem;}
     .cd-about .cd-clogo {margin-bottom: 2rem;}
@@ -591,6 +584,7 @@ button {outline: none;transition: all 0.3s ease;border: 0;}
     .cd-ctasection .cd-msgbtn, .cd-ctasection .cd-calltext {text-align: center;}
     .cd-ctasection .cd-calltext .cd-custcall {margin-top: 1rem;}
     .about-section .cd-relative {margin-top: 2rem;}
+    .cd-contact .contact-form-container {padding: 1.5rem;}
     
 }
 @media only screen and (min-width: 640px) and (max-width: 767px) {
