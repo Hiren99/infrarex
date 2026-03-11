@@ -10,8 +10,8 @@
 
 /* ----- AOS ----- */
 AOS.init({
-    // duration: 1000,
-    // once: true
+    easing: 'ease-out-back',
+    // duration: 1000
 });
 /* ----- # AOS ----- */
 

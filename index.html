@@ -10,10 +10,10 @@
     
     <!-- CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/aos.css" />
     <link rel="stylesheet" href="css/slick-theme.css" />
     <link rel="stylesheet" href="css/slick.css" />
     <link rel="stylesheet" href="css/FA.min.css" />
-    <link rel="stylesheet" href="css/aos.css" />
     <link rel="stylesheet" href="css/styles.css" />
 </head>
 
@@ -61,18 +61,88 @@
             </button>
             <div class="collapse navbar-collapse" id="nav">
                 <ul class="navbar-nav ms-auto align-items-md-center">
-                    <li class="nav-item"><a class="nav-link" href="about-us.html">About Infrax</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="javascript:;" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Company
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="about-us.html">About Infrax</a></li>
+                            <li><a class="dropdown-item" href="press.html">Press</a></li>
+                        </ul>
+                    </li>
+                    <!-- <li class="nav-item"><a class="nav-link" href="about-us.html"></a></li> -->
                     <li class="nav-item"><a class="nav-link" href="residential-solar.html">Residential Solar</a></li>
+                    <li class="nav-item"><a class="nav-link" href="solar-for-business.html">Industrial Solar</a></li>
                     <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="our-presence.html">Our Presence</a></li>
-                    <li class="nav-item"><a class="nav-link" href="connect.html">Let’s Connect</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="javascript:;" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Let’s Connect
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="contact-us.html">Contact Us</a></li>
+                            <li><a class="dropdown-item" href="career-with-us.html">Career With Us</a></li>
+                            <li><a class="dropdown-item" href="partner-with-us.html">Partner With Us</a></li>
+                        </ul>
+                    </li>
                     <li class="nav-item">
-                        <a class="cd-navregisterBtn btn btn-light ms-lg-2" href="book-survey.html">Book a Free Survey</a>
+                        <button type="button" class="cd-navregisterBtn" data-bs-toggle="modal" data-bs-target="#contactModal">
+                            Book a Free Survey
+                        </button>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
+    <!-- Modal -->
+    <div class="cd-formmodel modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold" id="contactModalLabel">Get a Free Quote</h5>
+                    <button
+                        type="button"
+                        class="btn-close btn-close-white"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                    ></button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-muted mb-4">Fill the form and we will contact you.</p>
+                    <form class="row g-3">
+                        <div class="col-md-6">
+                            <label class="form-label">Full Name</label>
+                            <input type="text" class="form-control" placeholder="Your name" required />
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Phone</label>
+                            <input type="tel" class="form-control" placeholder="Phone Number" required />
+                        </div>
+                        <div class="col-md-12">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control" placeholder="you@example.com" />
+                        </div>
+                        <div class="col-md-12">
+                            <label class="form-label">Service</label>
+                            <select class="form-select" required>
+                                <option value="" selected disabled>Select</option>
+                                <option>Rooftop Solar</option>
+                                <option>Commercial Solar</option>
+                                <option>Ground Mounted Solar</option>
+                            </select>
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label">Message</label>
+                            <textarea class="form-control" rows="3" placeholder="Write message..."></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn mt-0 mb-0 btn-outline-danger" data-bs-dismiss="modal">Close</button>
+                    <div class="cd-btnbox mt-0 mb-0"><button type="submit" class="cd-btn btn-split"><span>Submit</span></button></div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- ===== HERO ===== -->
     <div class="slider-container section">
@@ -82,7 +152,7 @@
                     <div class="cd-textbox">
                         <h1 class="cd-headingText">Still Paying High Electricity Bills?</h1>
                         <h2 class="cd-secondText">Reduce Your <strong>Electricity Bill to ₹0*</strong> with Smart Solar Solutions</h2>
-                        <div class="cd-btnbox"><a href="#" class="cd-btn btn-split"><span>Solar Solutions</span></a></div>
+                        <div class="cd-btnbox"><a href="about-us.html" class="cd-btn btn-split"><span>Solar Solutions</span></a></div>
                     </div>
                     <img src="images/banner/s1.webp" class="cd-banner" alt="Banner" />
                 </div>
@@ -92,7 +162,7 @@
                     <div class="cd-textbox">
                         <h1 class="cd-headingText">Still Paying High Electricity Bills?</h1>
                         <h2 class="cd-secondText">Reduce Your <strong>Electricity Bill to ₹0*</strong> with Smart Solar Solutions</h2>
-                        <div class="cd-btnbox"><a href="#" class="cd-btn btn-split"><span>Solar Solutions</span></a></div>
+                        <div class="cd-btnbox"><a href="about-us.html" class="cd-btn btn-split"><span>Solar Solutions</span></a></div>
                     </div>
                     <img src="images/banner/s1.webp" class="cd-banner" alt="Banner" />
                 </div>
@@ -116,7 +186,7 @@
                             <li>Professional, industry-certified installation</li>
                             <li>Dedicated 24/7 support team</li>
                         </ul>
-                        <div class="cd-btnbox"><a href="#" class="cd-btn btn-split"><span>Read More</span></a></div>
+                        <div class="cd-btnbox"><a href="about-us.html" class="cd-btn btn-split"><span>Read More</span></a></div>
                     </div>
                 </div>
                 <div class="col-xl-6 col-md-6 col-lg-6">
@@ -144,7 +214,7 @@
                                     <figure><img src="images/soulstion/1.webp" class="img-fluid cd-prodImg" alt="Rooftop Solar" /></figure>
                                     <h3>Rooftop Solar</h3>
                                     <p>Customized rooftop solar installations designed to help you achieve energy independence while reducing monthly electricity costs.</p>
-                                    <div class="cd-btnbox"><a href="#" class="cd-white btn-split"><span>Know More</span></a></div>
+                                    <div class="cd-btnbox"><a href="contact-us.html" class="cd-white btn-split"><span>Know More</span></a></div>
                                 </div>
                             </div>
                             <div class="col-xl-4 col-md-4 col-lg-4">
@@ -152,7 +222,7 @@
                                     <figure><img src="images/soulstion/2.webp" class="img-fluid cd-prodImg" alt="Commercial & Industrial Solar" /></figure>
                                     <h3>Commercial & Industrial Solar</h3>
                                     <p>Tailored solar solutions for factories and large-scale businesses to reduce operational expenses and improve sustainability.</p>
-                                    <div class="cd-btnbox"><a href="#" class="cd-white btn-split"><span>Know More</span></a></div>
+                                    <div class="cd-btnbox"><a href="contact-us.html" class="cd-white btn-split"><span>Know More</span></a></div>
                                 </div>
                             </div>
                             <div class="col-xl-4 col-md-4 col-lg-4">
@@ -160,7 +230,7 @@
                                     <figure><img src="images/soulstion/3.webp" class="img-fluid cd-prodImg" alt="Ground Mounted Solar" /></figure>
                                     <h3>Ground Mounted Solar</h3>
                                     <p>High-efficiency ground-mounted solar systems ideal for farms, unused land, and large operations seeking scalable renewable power.</p>
-                                    <div class="cd-btnbox"><a href="#" class="cd-white btn-split"><span>Know More</span></a></div>
+                                    <div class="cd-btnbox"><a href="contact-us.html" class="cd-white btn-split"><span>Know More</span></a></div>
                                 </div>
                             </div>
                         </div>
@@ -172,7 +242,11 @@
                                 <h4>Take the First Step Toward ₹0 Electricity Bills</h4>
                                 <h5>Let Our Experts Evaluate Your Solar Opportunity</h5>
                             </div>
-                            <div class="cd-btnbox"><a href="#" class="cd-btn btn-split"><span>Book Free Survey Now</span></a></div>
+                            <div class="cd-btnbox">
+                                <button type="button" class="cd-btn btn-split" data-bs-toggle="modal" data-bs-target="#contactModal">
+                                    <span>Book Free Survey Now</span>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -269,7 +343,11 @@
                 <div class="col-xl-12">
                     <div class="cd-cta">
                         <h3 class="mb-md-0">Start Saving with a Free Solar Assessment</h3>
-                        <div class="cd-btnbox"><a href="#" class="cd-btn btn-split"><span>Schedule My Free Survey</span></a></div>
+                        <div class="cd-btnbox">
+                            <button type="button" class="cd-btn btn-split" data-bs-toggle="modal" data-bs-target="#contactModal">
+                                <span>Schedule My Free Survey</span>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -328,7 +406,7 @@
                 </div>
             </div>
         </div>
-        <div class="cd-btnbox"><a href="#" class="cd-btn btn-split"><span>View Our Portfolio</span></a></div>
+        <div class="cd-btnbox"><a href="solar-for-business.html" class="cd-btn btn-split"><span>View Our Portfolio</span></a></div>
     </section>
 
     <!-- CTA -->
@@ -339,7 +417,11 @@
                     <div class="cd-msgbtn">
                         <h2>Get Free Consultancy</h2>
                         <h3>Discuss your solar project with our experts today.</h3>
-                        <div class="cd-btnbox mt-4"><a href="#" class="cd-white btn-split"><span>Get A Quote</span></a></div>
+                        <div class="cd-btnbox mt-4">
+                            <button type="button" class="cd-white btn-split" data-bs-toggle="modal" data-bs-target="#contactModal">
+                                <span>Get A Quote</span>
+                            </button>
+                        </div>
                     </div>                    
                 </div>
                 <div class="col-xl-6 col-md-6 col-lg-6">
@@ -392,7 +474,7 @@
     <div class="mobile-sticky-footer">
         <a href="tel:+919612212296"><i class="fa fa-phone" aria-hidden="true"></i></a>
         <a href="mailto:sales@infraxrenewable.com"><i class="fa fa-envelope" aria-hidden="true"></i></a>
-        <a href="connect.html"><i class="fa fa-paper-plane" aria-hidden="true"></i></a>
+        <a href="contact-us.html"><i class="fa fa-paper-plane" aria-hidden="true"></i></a>
         <a target="_blank" href="https://www.facebook.com/p/Infrax-Renewable-Limited-100083152549457/"><i class="fa-brands fa-facebook-f"></i></a>
         <a target="_blank" href="https://www.instagram.com/infrax.renewable/"><i class="fa-brands fa-instagram"></i></a>
     </div>

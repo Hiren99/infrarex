@@ -61,18 +61,88 @@
             </button>
             <div class="collapse navbar-collapse" id="nav">
                 <ul class="navbar-nav ms-auto align-items-md-center">
-                    <li class="nav-item"><a class="nav-link" href="about-us.html">About Infrax</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="javascript:;" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Company
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="about-us.html">About Infrax</a></li>
+                            <li><a class="dropdown-item" href="press.html">Press</a></li>
+                        </ul>
+                    </li>
+                    <!-- <li class="nav-item"><a class="nav-link" href="about-us.html"></a></li> -->
                     <li class="nav-item"><a class="nav-link" href="residential-solar.html">Residential Solar</a></li>
+                    <li class="nav-item"><a class="nav-link" href="solar-for-business.html">Industrial Solar</a></li>
                     <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="our-presence.html">Our Presence</a></li>
-                    <li class="nav-item"><a class="nav-link" href="connect.html">Let’s Connect</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="javascript:;" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Let’s Connect
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="contact-us.html">Contact Us</a></li>
+                            <li><a class="dropdown-item" href="career-with-us.html">Career With Us</a></li>
+                            <li><a class="dropdown-item" href="partner-with-us.html">Partner With Us</a></li>
+                        </ul>
+                    </li>
                     <li class="nav-item">
-                        <a class="cd-navregisterBtn btn btn-light ms-lg-2" href="book-survey.html">Book a Free Survey</a>
+                        <button type="button" class="cd-navregisterBtn" data-bs-toggle="modal" data-bs-target="#contactModal">
+                            Book a Free Survey
+                        </button>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
+    <!-- Modal -->
+    <div class="cd-formmodel modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold" id="contactModalLabel">Get a Free Quote</h5>
+                    <button
+                        type="button"
+                        class="btn-close btn-close-white"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                    ></button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-muted mb-4">Fill the form and we will contact you.</p>
+                    <form class="row g-3">
+                        <div class="col-md-6">
+                            <label class="form-label">Full Name</label>
+                            <input type="text" class="form-control" placeholder="Your name" required />
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Phone</label>
+                            <input type="tel" class="form-control" placeholder="Phone Number" required />
+                        </div>
+                        <div class="col-md-12">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control" placeholder="you@example.com" />
+                        </div>
+                        <div class="col-md-12">
+                            <label class="form-label">Service</label>
+                            <select class="form-select" required>
+                                <option value="" selected disabled>Select</option>
+                                <option>Rooftop Solar</option>
+                                <option>Commercial Solar</option>
+                                <option>Ground Mounted Solar</option>
+                            </select>
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label">Message</label>
+                            <textarea class="form-control" rows="3" placeholder="Write message..."></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn mt-0 mb-0 btn-outline-danger" data-bs-dismiss="modal">Close</button>
+                    <div class="cd-btnbox mt-0 mb-0"><button type="submit" class="cd-btn btn-split"><span>Submit</span></button></div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- section banner -->
     <section class="hero cd-aboutheader">
@@ -105,7 +175,7 @@
                             <li>Seamless setup: Safe, efficient, and professional installation.</li>
                             <li>Accessible green energy: Tailored finance options to fit your budget.</li>
                         </ul>
-                        <div class="cd-btnbox"><a href="tel:+9118002742704" class="cd-btn btn-split"><span>Contact Us!</span></a></div>
+                        <div class="cd-btnbox"><a href="contact-us.html" class="cd-btn btn-split"><span>Contact Us!</span></a></div>
                     </div>
                 </div>
             </div>
@@ -123,7 +193,7 @@
                     <p>Year of establishment</p>
                 </div>
 
-                <div class="counter-item" data-aos="fade-up" data-aos-duration="1500">
+                <div class="counter-item" data-aos="fade-up" data-aos-duration="1200">
                     <div class="icon">🌍</div>
                     <h2>
                         <span class="counter" data-target="10" data-suffix="k+">0</span>
@@ -131,7 +201,7 @@
                     <p>of customers worldwide</p>
                 </div>
 
-                <div class="counter-item" data-aos="fade-left" data-aos-duration="2000">
+                <div class="counter-item" data-aos="fade-left" data-aos-duration="1400">
                     <div class="icon">♻</div>
                     <h2>
                         <span class="counter" data-target="7" data-suffix="+">0</span>
@@ -435,7 +505,9 @@
                     <div class="cd-msgbtn">
                         <h2>Get Free Consultancy</h2>
                         <h3>Discuss your solar project with our experts today.</h3>
-                        <div class="cd-btnbox mt-4"><a href="#" class="cd-white btn-split"><span>Get A Quote</span></a></div>
+                        <button type="button" class="cd-white btn-split" data-bs-toggle="modal" data-bs-target="#contactModal">
+                            <span>Get A Quote</span>
+                        </button>
                     </div>                    
                 </div>
                 <div class="col-xl-6 col-md-6 col-lg-6">
@@ -488,7 +560,7 @@
     <div class="mobile-sticky-footer">
         <a href="tel:+919612212296"><i class="fa fa-phone" aria-hidden="true"></i></a>
         <a href="mailto:sales@infraxrenewable.com"><i class="fa fa-envelope" aria-hidden="true"></i></a>
-        <a href="connect.html"><i class="fa fa-paper-plane" aria-hidden="true"></i></a>
+        <a href="contact-us.html"><i class="fa fa-paper-plane" aria-hidden="true"></i></a>
         <a target="_blank" href="https://www.facebook.com/p/Infrax-Renewable-Limited-100083152549457/"><i class="fa-brands fa-facebook-f"></i></a>
         <a target="_blank" href="https://www.instagram.com/infrax.renewable/"><i class="fa-brands fa-instagram"></i></a>
     </div>
