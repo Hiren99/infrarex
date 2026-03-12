@@ -9,10 +9,10 @@
     $('#return-to-top').click(function () { $('body,html').animate({ scrollTop: 0 }, 500); });
 
 /* ----- AOS ----- */
-// AOS.init({
-//     easing: 'ease-out-back',
-//     duration: 1000
-// });
+AOS.init({
+    easing: 'ease-out-back',
+    duration: 1000
+});
 
 
 /* ----- # AOS ----- */
