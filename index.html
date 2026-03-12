@@ -490,6 +490,9 @@
     <script src="js/main.js"></script>
     <script>
         $(document).ready(function () {
+            $('.my-slider').on('init', function () {
+                AOS.refresh();
+            });
             $(".my-slider").slick({
                 slidesToShow: 1,
                 slidesToScroll: 1,
@@ -497,29 +500,10 @@
                 autoplaySpeed: 2000,
                 infinite: true,
                 dots: true,
-                arrows: false,
-                responsive: [
-                    {
-                        breakpoint: 1024,
-                        settings: {
-                            slidesToShow: 1,
-                        },
-                    },
-                    {
-                        breakpoint: 768,
-                        settings: {
-                            slidesToShow: 1,
-                        },
-                    },
-                ],
+                arrows: false
             });
         });
     </script>
-<script>
-        AOS.init({
-            duration: 1000,
-            // once: true
-        });
-    </script>
+
 </body>
 </html>
